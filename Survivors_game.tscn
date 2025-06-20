@@ -32,36 +32,6 @@ curve = SubResource("Curve2D_6swiq")
 unique_name_in_owner = true
 position = Vector2(-403, -271)
 
-[node name="PineTree" parent="." instance=ExtResource("2_r1nli")]
-position = Vector2(525, 394)
-
-[node name="PineTree2" parent="." instance=ExtResource("2_r1nli")]
-position = Vector2(1182, 326)
-
-[node name="PineTree3" parent="." instance=ExtResource("2_r1nli")]
-position = Vector2(768, 834)
-
-[node name="PineTree4" parent="." instance=ExtResource("2_r1nli")]
-position = Vector2(1578, 825)
-
-[node name="PineTree5" parent="." instance=ExtResource("2_r1nli")]
-position = Vector2(271, 137)
-
-[node name="PineTree6" parent="." instance=ExtResource("2_r1nli")]
-position = Vector2(204, 1004)
-
-[node name="PineTree7" parent="." instance=ExtResource("2_r1nli")]
-position = Vector2(1611, 191)
-
-[node name="PineTree8" parent="." instance=ExtResource("2_r1nli")]
-position = Vector2(394, 443)
-
-[node name="PineTree9" parent="." instance=ExtResource("2_r1nli")]
-position = Vector2(692, 885)
-
-[node name="PineTree10" parent="." instance=ExtResource("2_r1nli")]
-position = Vector2(865, 891)
-
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.3
 autostart = true
@@ -93,6 +63,38 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 120
 text = "Game Over"
+
+[node name="Trees" type="Node2D" parent="."]
+
+[node name="PineTree" parent="Trees" instance=ExtResource("2_r1nli")]
+position = Vector2(525, 394)
+
+[node name="PineTree2" parent="Trees" instance=ExtResource("2_r1nli")]
+position = Vector2(1182, 326)
+
+[node name="PineTree3" parent="Trees" instance=ExtResource("2_r1nli")]
+position = Vector2(768, 834)
+
+[node name="PineTree4" parent="Trees" instance=ExtResource("2_r1nli")]
+position = Vector2(1578, 825)
+
+[node name="PineTree5" parent="Trees" instance=ExtResource("2_r1nli")]
+position = Vector2(271, 137)
+
+[node name="PineTree6" parent="Trees" instance=ExtResource("2_r1nli")]
+position = Vector2(204, 1004)
+
+[node name="PineTree7" parent="Trees" instance=ExtResource("2_r1nli")]
+position = Vector2(1611, 191)
+
+[node name="PineTree8" parent="Trees" instance=ExtResource("2_r1nli")]
+position = Vector2(394, 443)
+
+[node name="PineTree9" parent="Trees" instance=ExtResource("2_r1nli")]
+position = Vector2(692, 885)
+
+[node name="PineTree10" parent="Trees" instance=ExtResource("2_r1nli")]
+position = Vector2(865, 891)
 
 [connection signal="health_depleted" from="Player" to="." method="_on_player_health_depleted"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
